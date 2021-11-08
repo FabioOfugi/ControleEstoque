@@ -20,7 +20,11 @@ public class PainelCliente {
 			String opcao = Menus.menuCliente();
 
 			if(!opcao.isEmpty()) {
-				opcao_int = Integer.parseInt(opcao);
+				try {
+					opcao_int = Integer.parseInt(opcao);
+				} catch (NumberFormatException e) {
+					e.printStackTrace();
+				}
 			}
 
 			services = new Services();
@@ -94,7 +98,12 @@ public class PainelCliente {
 	private static void updateCliente() {
 
 		String codigo_str = JOptionPane.showInputDialog("Qual cliente deseja alterar?");
-		int codigo = Integer.parseInt(codigo_str);
+		int codigo = -1;
+		try {
+			codigo = Integer.parseInt(codigo_str);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
 
 		int index = buscaPosicao(codigo);
 
@@ -161,7 +170,12 @@ public class PainelCliente {
 
 	private static void buscaCliente() {
 		String codigo_str = JOptionPane.showInputDialog("Qual cliente deseja consultar?");
-		int codigo = Integer.parseInt(codigo_str);
+		int codigo = -1;
+		try {
+			codigo = Integer.parseInt(codigo_str);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
 
 		int index = buscaPosicao(codigo);
 

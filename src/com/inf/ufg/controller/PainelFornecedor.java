@@ -20,7 +20,11 @@ public class PainelFornecedor {
 			String opcao = Menus.menuFornecedor();
 
 			if(!opcao.isEmpty()) {
-				opcao_int = Integer.parseInt(opcao);
+				try {
+					opcao_int = Integer.parseInt(opcao);
+				} catch (NumberFormatException e) {
+					e.printStackTrace();
+				}
 			}
 
 			services = new Services();

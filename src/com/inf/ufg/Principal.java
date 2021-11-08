@@ -5,6 +5,7 @@ import javax.swing.*;
 
 import com.inf.ufg.controller.PainelCliente;
 import com.inf.ufg.controller.PainelFornecedor;
+import com.inf.ufg.controller.PainelProduto;
 import com.inf.ufg.model.Cliente;
 import com.inf.ufg.model.Fornecedor;
 import com.inf.ufg.model.Produto;
@@ -38,13 +39,9 @@ public class Principal {
 				break;
 
 			case 3:
-
+				PainelProduto.iniciar();
 				break;
 
-			case 4:
-
-				break;
-				
 			case 0:
 				JOptionPane.showMessageDialog(null, "Fechando..");
 				break;

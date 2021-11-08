@@ -1,12 +1,10 @@
 package com.inf.ufg.model;
-import java.util.Calendar;
 
 public class Produto {
 	private int codigo, quantidade;
-	private String nome, fabricante, descricao, unidade_medida;
-	private double valor_atual;
-	private Calendar data_validade;
-	private Fornecedor fornecedor;
+	private String nome, fabricante, descricao, unidade_medida, data_validade;
+	private Double valor_atual;
+	private String nome_fornecedor;
 	
 	public int getCodigo() {
 		return codigo;
@@ -56,27 +54,27 @@ public class Produto {
 		this.unidade_medida = unidade_medida;
 	}
 
-	public double getValor_atual() {
+	public Double getValor_atual() {
 		return valor_atual;
 	}
 
-	public void setValor_atual(double valor_atual) {
+	public void setValor_atual(Double valor_atual) {
 		this.valor_atual = valor_atual;
 	}
 
-	public Calendar getData_validade() {
+	public String getData_validade() {
 		return data_validade;
 	}
 
-	public void setData_validade(Calendar data_validade) {
+	public void setData_validade(String data_validade) {
 		this.data_validade = data_validade;
 	}
 
-	public Fornecedor getFornecedor() {
-		return fornecedor;
+	public String getFornecedor() {
+		return nome_fornecedor;
 	}
 
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
+	public void setFornecedor(String fornecedor) {
+		this.nome_fornecedor = fornecedor;
 	}
 }
