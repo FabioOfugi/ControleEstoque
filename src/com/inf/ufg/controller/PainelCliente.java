@@ -61,7 +61,7 @@ public class PainelCliente {
 	}
 
 
-	private static void createCliente() {
+	public static void createCliente() {
 		
 		//Gera codigo aleatório
 		int codigo = Math.abs(UUID.randomUUID().hashCode());

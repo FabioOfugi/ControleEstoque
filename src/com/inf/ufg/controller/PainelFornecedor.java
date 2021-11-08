@@ -161,7 +161,7 @@ public class PainelFornecedor {
 
 	}
 
-	private static int buscaPosicao(int id) {
+	public static int buscaPosicao(int id) {
 		int index = 0;
 
 		for (Fornecedor fornecedor: Principal.fornecedores) {
